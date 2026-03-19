@@ -1,0 +1,84 @@
+import requests
+
+sr = '''
+=================================
+   CURRENCY CONVERTER (INR)
+=================================
+      Convert INR to:
+      1. USD (USA)
+      2. CNY (China)         
+      3. JPY (Japan)
+      4. KRW (South Korea)
+      5. AED (UAE)
+      6. SAR (Saudi Arabia)
+      7. SGD (Singapore)
+      8. MYR (Malaysia)
+      9. THB (Thailand)
+      10. PKR (Pakistan)
+      11. BDT (Bangladesh)
+      12. LKR (Sri Lanka)
+=================================
+'''
+print(sr)
+
+choice = int(input("\nEnter your choice (1-12): "))
+amount = float(input("Enter amount in INR: "))
+
+if choice < 1 or choice > 12 or amount < 0:
+    print("Invalid Choice Or Amount. Try Again..")
+
+else:
+    print("\nFetching real-time exchange rates...\n")
+
+    url = "https://api.exchangerate-api.com/v4/latest/INR"
+    data = requests.get(url).json()
+
+    if choice == 1:
+        rate = data['rates']['USD']
+        print(f"{amount} INR = {amount * rate} USD - US Dollar")
+
+    elif choice == 2:
+        rate = data['rates']['CNY']
+        print(f"{amount} INR = {amount * rate} CNY - Chinese Yuan")
+
+    elif choice == 3:
+        rate = data['rates']['JPY']
+        print(f"{amount} INR = {amount * rate} JPY - Japanese Yen")
+
+    elif choice == 4:
+        rate = data['rates']['KRW']
+        print(f"{amount} INR = {amount * rate} KRW - South Korean Won")
+
+    elif choice == 5:
+        rate = data['rates']['AED']
+        print(f"{amount} INR = {amount * rate} AED - UAE Dirham")
+
+    elif choice == 6:
+        rate = data['rates']['SAR']
+        print(f"{amount} INR = {amount * rate} SAR - Saudi Riyal")
+
+    elif choice == 7:
+        rate = data['rates']['SGD']
+        print(f"{amount} INR = {amount * rate} SGD - Singapore Dollar")
+
+    elif choice == 8:
+        rate = data['rates']['MYR']
+        print(f"{amount} INR = {amount * rate} MYR - Malaysian Ringgit")
+
+
+    elif choice == 9:
+        rate = data['rates']['THB']
+        print(f"{amount} INR = {amount * rate} THB - Thailand Baht")
+
+    elif choice == 10:
+        rate = data['rates']['PKR']
+        print(f"{amount} INR = {amount * rate} PKR - Pakistani Rupee")
+
+    elif choice == 11:
+        rate = data['rates']['BDT']
+        print(f"{amount} INR = {amount * rate} BDT - Bangladeshi Taka")
+
+
+    elif choice == 12:
+        rate = data['rates']['LKR']
+        print(f"{amount} INR = {amount * rate} LKR - Sri Lankan Rupee")
