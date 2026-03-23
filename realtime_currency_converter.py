@@ -17,7 +17,15 @@ sr = '''
       10. PKR (Pakistan)
       11. BDT (Bangladesh)
       12. LKR (Sri Lanka)
-=================================
+      13. EUR (Euro - Europe)
+      14. GBP (United Kingdom)
+      15. AUD (Australia)
+      16. CAD (Canada)
+      17. CHF (Switzerland)
+      18. RUB (Russia)
+      19. ZAR (South Africa)
+      20. NZD (New Zealand
+  =================================
 '''
 print(sr)
 
@@ -82,3 +90,35 @@ else:
     elif choice == 12:
         rate = data['rates']['LKR']
         print(f"{amount} INR = {amount * rate} LKR - Sri Lankan Rupee")
+
+    elif choice == 13:
+        rate = data['rates']['EUR']
+        print(f"{amount} INR = {amount * rate} EUR - Euro (Europe)")
+
+    elif choice == 14:
+        rate = data['rates']['GBP']
+        print(f"{amount} INR = {amount * rate} GBP - British Pound (United Kingdom)")
+
+    elif choice == 15:
+        rate = data['rates']['AUD']
+        print(f"{amount} INR = {amount * rate} AUD - Australian Dollar (Australia)")
+
+    elif choice == 16:
+        rate = data['rates']['CAD']
+        print(f"{amount} INR = {amount * rate} CAD - Canadian Dollar (Canada)")
+
+    elif choice == 17:
+        rate = data['rates']['CHF']
+        print(f"{amount} INR = {amount * rate} CHF - Swiss Franc (Switzerland)")
+
+    elif choice == 18:
+        rate = data['rates']['RUB']
+        print(f"{amount} INR = {amount * rate} RUB - Russian Ruble (Russia)")
+
+    elif choice == 19:
+        rate = data['rates']['ZAR']
+        print(f"{amount} INR = {amount * rate} ZAR - South African Rand (South Africa)")
+
+    elif choice == 20:
+        rate = data['rates']['NZD']
+        print(f"{amount} INR = {amount * rate} NZD - New Zealand Dollar (New Zealand)")
