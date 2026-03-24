@@ -25,6 +25,8 @@ sr = '''
       18. RUB (Russia)
       19. ZAR (South Africa)
       20. NZD (New Zealand
+      21. HKD (Hong Kong)
+      22. TRY (Turkey)
   =================================
 '''
 print(sr)
@@ -32,7 +34,7 @@ print(sr)
 choice = int(input("\nEnter your choice (1-12): "))
 amount = float(input("Enter amount in INR: "))
 
-if choice < 1 or choice > 12 or amount < 0:
+if choice < 1 or choice > 30 or amount < 0:
     print("Invalid Choice Or Amount. Try Again..")
 
 else:
@@ -122,3 +124,9 @@ else:
     elif choice == 20:
         rate = data['rates']['NZD']
         print(f"{amount} INR = {amount * rate} NZD - New Zealand Dollar (New Zealand)")
+    elif choice == 21:
+        rate = data['rates']['HKD']
+        print(f"{amount} INR = {amount * rate} HKD - Hong Kong Dollar (Hong Kong)")
+    elif choice == 22:
+        rate = data['rates']['TRY']
+        print(f"{amount} INR = {amount * rate} TRY - Turkish Lira (Turkey)")
