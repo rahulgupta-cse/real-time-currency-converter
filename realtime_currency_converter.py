@@ -40,7 +40,7 @@ if choice < 1 or choice > 30 or amount < 0:
 else:
     print("\nFetching real-time exchange rates...\n")
 
-    url = "https://api.exchangerate-api.com/v4/latest/INR"
+    url = "https://api.exchangerate-api.com/v4/latest/INR" #This url is used for fetching  real time exchange rate
     data = requests.get(url).json()
 
     if choice == 1:
