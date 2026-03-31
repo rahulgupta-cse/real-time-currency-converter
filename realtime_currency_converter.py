@@ -27,6 +27,9 @@ sr = '''
       20. NZD (New Zealand
       21. HKD (Hong Kong)
       22. TRY (Turkey)
+      23. NOK (Norway)
+      24. SEK (Sweden)
+      25. DKK (Denmark)
   =================================
 '''
 print(sr)
@@ -130,3 +133,14 @@ else:
     elif choice == 22:
         rate = data['rates']['TRY']
         print(f"{amount} INR = {amount * rate} TRY - Turkish Lira (Turkey)")
+    elif choice == 23:
+        rate = data['rates']['NOK']
+        print(f"{amount} INR = {amount * rate} NOK - Norwegian Krone (Norway)")
+
+    elif choice == 24:
+        rate = data['rates']['SEK']
+        print(f"{amount} INR = {amount * rate} SEK - Swedish Krona (Sweden)")
+
+    elif choice == 25:
+        rate = data['rates']['DKK']
+        print(f"{amount} INR = {amount * rate} DKK - Danish Krone (Denmark)")
