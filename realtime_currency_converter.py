@@ -147,3 +147,6 @@ else:
     elif choice == 26:
         rate = data['rates']['QAR']
         print(f"{amount} INR = {amount * rate} QAR - Qatari Riyal (Qatar)")
+    elif choice == 27:
+        rate = data['rates']['KWD']
+        print(f"{amount} INR = {amount * rate} KWD - Kuwaiti Dinar (Kuwait)")
