@@ -30,6 +30,8 @@ sr = '''
       23. NOK (Norway)
       24. SEK (Sweden)
       25. DKK (Denmark)
+      26. QAR (Qatar)
+      27. KWD (Kuwait)
   =================================
 '''
 print(sr)
