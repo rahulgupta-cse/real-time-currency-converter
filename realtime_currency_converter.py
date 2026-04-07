@@ -32,6 +32,8 @@ sr = '''
       25. DKK (Denmark)
       26. QAR (Qatar)
       27. KWD (Kuwait)
+      28. OMR (Oman)
+
   =================================
 '''
 print(sr)
@@ -152,3 +154,6 @@ else:
     elif choice == 27:
         rate = data['rates']['KWD']
         print(f"{amount} INR = {amount * rate} KWD - Kuwaiti Dinar (Kuwait)")
+    elif choice == 28:
+        rate = data['rates']['OMR']
+        print(f"{amount} INR = {amount * rate} OMR - Omani Rial (Oman)")
