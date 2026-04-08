@@ -36,6 +36,7 @@ sr = '''
       29. BHD (Bahrain)
       30. IDR (Indonesia)
       31. PHP (Philippines)
+      32. VND (Vietnam)
 
 
   =================================
@@ -170,3 +171,6 @@ else:
     elif choice == 31:
         rate = data['rates']['PHP']
         print(f"{amount} INR = {amount * rate} PHP - Philippine Peso (Philippines)")
+    elif choice == 32:
+        rate = data['rates']['VND']
+        print(f"{amount} INR = {amount * rate} VND - Vietnamese Dong (Vietnam)")
