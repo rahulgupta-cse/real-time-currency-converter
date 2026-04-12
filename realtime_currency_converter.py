@@ -37,16 +37,18 @@ sr = '''
       30. IDR (Indonesia)
       31. PHP (Philippines)
       32. VND (Vietnam)
+      33. EGP (Egypt)
+      34. BRL (Brazil)
 
 
   =================================
 '''
 print(sr)
 
-choice = int(input("\nEnter your choice (1-12): "))
+choice = int(input("\nEnter your choice (1-34): "))
 amount = float(input("Enter amount in INR: "))
 
-if choice < 1 or choice > 30 or amount < 0:
+if choice < 1 or choice > 34 or amount < 0:
     print("Invalid Choice Or Amount. Try Again..")
 
 else:
@@ -174,3 +176,9 @@ else:
     elif choice == 32:
         rate = data['rates']['VND']
         print(f"{amount} INR = {amount * rate} VND - Vietnamese Dong (Vietnam)")
+    elif choice == 33:
+        rate = data['rates']['EGP']
+        print(f"{amount} INR = {amount * rate} EGP - Egyptian Pound (Egypt)")
+    elif choice == 34:
+        rate = data['rates']['BRL']
+        print(f"{amount} INR = {amount * rate} BRL - Brazilian Real (Brazil)")
